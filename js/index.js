@@ -61,7 +61,7 @@ navA.forEach((nav, index) => {
 let start = document.createElement("a");
 let end = document.createElement("a");
 start.style.color = "green";
-end.style.color = "blue";
+end.style.color = "green";
 start.textContent = "Start";
 end.textContent = "End";
 nav.prepend(start);
@@ -95,6 +95,9 @@ contentHeader[3].textContent = siteContent["main-content"]["product-h4"];
 contentHeader[4].textContent = siteContent["main-content"]["vision-h4"];
 
 let contentP = document.querySelectorAll(".text-content p");
+// contentP.forEach((index, content) => {
+//   index.textContent = siteContent["main-content"][content];
+// })
 contentP[0].textContent = siteContent["main-content"]["features-content"];
 contentP[1].textContent = siteContent["main-content"]["about-content"];
 contentP[2].textContent = siteContent["main-content"]["services-content"];
@@ -106,13 +109,13 @@ let contactHeader = document.querySelector(".contact h4");
 contactHeader.textContent = siteContent.contact["contact-h4"];
 
 let contactP = document.querySelectorAll(".contact p");
-// contactP[0].textContent = siteContent.contact.address;
-// contactP[1].textContent = siteContent.contact.phone;
-// contactP[2].textContent = siteContent.contact.email;
-const contactIndex = Object.values(siteContent["contact"]);
-for (let i = 0; i < contactP.length; i++) {
-  contactP[i].textContent = contactIndex[i + 1];
-}
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+// const contactIndex = Object.values(siteContent["contact"]);
+// for (let i = 0; i < contactP.length; i++) {
+//   contactP[i].textContent = contactIndex[i + 1];
+// }
 
 // * Footer
 let footerP = document.querySelector("footer p");
